@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>docker安装青龙面板</title>
+      <link href="/posts/78178506/"/>
+      <url>/posts/78178506/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>给服务器回口血</p></blockquote><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>centos安装docker：<a href="https://www.oyal.ml/posts/6782be63/">https://www.oyal.ml/posts/6782be63/</a></p><p>防火墙和安全组需要放开5700端口</p><p>创建容器，会自动拉取镜像</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">docker run -dit \</span><br><span class="line">  --name QL \</span><br><span class="line">  --hostname QL \</span><br><span class="line">  --restart always \</span><br><span class="line">  -p 5700:5700 \</span><br><span class="line">  -v $PWD/QL/config:/ql/config \</span><br><span class="line">  -v $PWD/QL/log:/ql/log \</span><br><span class="line">  -v $PWD/QL/db:/ql/db \</span><br><span class="line">  -v $PWD/QL/scripts:/ql/scripts \</span><br><span class="line">  -v $PWD/QL/jbot:/ql/jbot \</span><br><span class="line">  whyour/qinglong:latest</span><br></pre></td></tr></table></figure><p>浏览器打开 公网ip:5700</p><p><img src="https://oyal.oss-cn-beijing.aliyuncs.com/img/202110151756512.png"></p><p>右上角添加定时任务，名称随意命令输入</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ql repo https://ghproxy.com/https://github.com/shufflewzc/faker2.git &quot;jd_|jx_|gua_|jddj_|getJDCookie&quot; &quot;activity|backUp&quot; &quot;^jd[^_]|USER|function|utils|sendnotify|ZooFaker_Necklace.js|JDJRValidator_Pure|sign_graphics_validate|ql&quot;</span><br></pre></td></tr></table></figure><p>定时规则填<code>0 0 0 * * *</code>，手动运行脚本，之后每天0点会拉取最新脚本</p><p><img src="https://oyal.oss-cn-beijing.aliyuncs.com/img/202110151802996.png"></p><h2 id="获取京东cookie"><a href="#获取京东cookie" class="headerlink" title="获取京东cookie"></a>获取京东cookie</h2><p>打开<a href="https://bean.m.jd.com/bean/signIndex.action">https://bean.m.jd.com/bean/signIndex.action</a>，登录京东</p><p>f12打开控制台，复制cookie值</p><p><img src="https://oyal.oss-cn-beijing.aliyuncs.com/img/202110151805795.png"></p><p>返回青龙面板添加环境变量</p><p>名称：JD_COOKIE，值为刚才复制的cookie，可添加多个账号</p><p>建议添加环境变量JD_CARD，值为true，自动清空购物车</p><p><img src="https://oyal.oss-cn-beijing.aliyuncs.com/img/202110151817719.png" alt="image-20211015181717659"></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Centos安装使用Nginx</title>
       <link href="/posts/89ac143e/"/>
       <url>/posts/89ac143e/</url>
