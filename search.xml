@@ -15,7 +15,7 @@
           
           <category> 后端 </category>
           
-          <category> 数据库 </category>
+          <category> python </category>
           
       </categories>
       
@@ -44,7 +44,7 @@
           
           <category> 后端 </category>
           
-          <category> 数据库 </category>
+          <category> python </category>
           
       </categories>
       
@@ -72,6 +72,8 @@
       <categories>
           
           <category> 后端 </category>
+          
+          <category> python </category>
           
       </categories>
       
@@ -127,6 +129,8 @@
           
           <category> 前端 </category>
           
+          <category> JavaScript </category>
+          
       </categories>
       
       
@@ -151,6 +155,8 @@
       <categories>
           
           <category> 前端 </category>
+          
+          <category> 工程化 </category>
           
       </categories>
       
@@ -179,6 +185,8 @@
           
           <category> 前端 </category>
           
+          <category> JavaScript </category>
+          
       </categories>
       
       
@@ -203,6 +211,8 @@
       <categories>
           
           <category> 前端 </category>
+          
+          <category> 构建工具 </category>
           
       </categories>
       
