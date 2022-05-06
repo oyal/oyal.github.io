@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>sequelize设置时间默认值</title>
+      <link href="/posts/7a5df1d6/"/>
+      <url>/posts/7a5df1d6/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://github.com/sequelize/sequelize/issues/4896">https://github.com/sequelize/sequelize/issues/4896</a></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; Sequelize, DataTypes &#125; = <span class="built_in">require</span>(<span class="string">&#x27;sequelize&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> User = sequelize.define(<span class="string">&#x27;user&#x27;</span>, &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="attr">createdAt</span>: &#123;</span><br><span class="line">    <span class="attr">type</span>: DataTypes.DATE,</span><br><span class="line">    <span class="attr">defaultValue</span>: Sequelize.literal(<span class="string">&#x27;CURRENT_TIMESTAMP&#x27;</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">updatedAt</span>: &#123;</span><br><span class="line">    <span class="attr">type</span>: DataTypes.DATE,</span><br><span class="line">    <span class="attr">defaultValue</span>: Sequelize.literal(<span class="string">&#x27;CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; desc users;</span><br><span class="line">+-----------+--------------+------+-----+-------------------+-----------------------------+</span><br><span class="line">| Field     | Type         | Null | Key | Default           | Extra                       |</span><br><span class="line">+-----------+--------------+------+-----+-------------------+-----------------------------+</span><br><span class="line">| id        | int(11)      | NO   | PRI | NULL              | auto_increment              |</span><br><span class="line">| username  | varchar(255) | NO   | UNI | NULL              |                             |</span><br><span class="line">| password  | varchar(255) | NO   |     | NULL              |                             |</span><br><span class="line">| avatar    | varchar(255) | YES  |     | NULL              |                             |</span><br><span class="line">| createdAt | datetime     | YES  |     | CURRENT_TIMESTAMP |                             |</span><br><span class="line">| updatedAt | datetime     | YES  |     | CURRENT_TIMESTAMP | on update CURRENT_TIMESTAMP |</span><br><span class="line">+-----------+--------------+------+-----+-------------------+-----------------------------+</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vue+koa+token登录验证</title>
       <link href="/posts/68906fcf/"/>
       <url>/posts/68906fcf/</url>
@@ -219,7 +238,7 @@
       
         <tags>
             
-            <tag> 拷贝 </tag>
+            <tag> js </tag>
             
         </tags>
       
@@ -246,8 +265,6 @@
             
             <tag> node </tag>
             
-            <tag> 前端工程化 </tag>
-            
         </tags>
       
     </entry>
@@ -273,7 +290,7 @@
       
         <tags>
             
-            <tag> javascript </tag>
+            <tag> js </tag>
             
         </tags>
       
